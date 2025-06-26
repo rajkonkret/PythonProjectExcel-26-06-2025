@@ -16,3 +16,6 @@ if __name__ == '__main__':
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 # (.venv) PS C:\Users\cscomarch\PycharmProjects\PythonProjectExcel-26-06-2025> python .\main.py
 # Hi, PyCharm
+# (.venv) PS C:\Users\cscomarch\PycharmProjects\PythonProjectExcel-26-06-2025> python .\main.py
+# Hi, PyCharm
+# snake_case
