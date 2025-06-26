@@ -93,3 +93,67 @@ print(f"Nazywam się {name}")
 print("Nazywam się {}".format(name))
 
 print("Nazywam się %s" % name)  # Nazywam się 90
+
+"""Komentarz
+ wielolinijkowy"""
+
+print('''Tekst
+wielolinijkowy''')
+# Tekst
+# wielolinijkowy
+
+print(100 / 2)  # dzielenie
+print(100 // 2)  # czesc całkowita dzielenia
+print(100 % 3)  # modulo, reszta z dzielenia
+
+zysk = 890987654321
+print(f"Nasza duża liczba: {zysk:,}")  # Nasza duża liczba: 890,987,654,321
+print(f"Nasza duża liczba: {zysk:_}")  # Nasza duża liczba: 890_987_654_321
+print(f"Nasza duża liczba: {zysk:_}".replace("_", " "))  # Nasza duża liczba: 890 987 654 321
+
+zysk = 890_987_654_321
+print(type(zysk))
+print(zysk)  # 890987654321
+
+encoded_text = tekst.encode('utf-8')
+print(encoded_text)  # b'witaj \xc5\x9awiecie'
+print(type(encoded_text))  # <class 'bytes'>
+print(encoded_text.decode('utf-8'))  # witaj Świecie
+
+# kolekcje
+# lista, krotka(tuple), zbiór(set), słownik
+
+lista = [5, 6, 7, 8, 9, "Radek"]
+print(lista)  # [5, 6, 7, 8, 9, 'Radek']
+
+lista2 = lista  # kopia referencji
+print(lista)  # [5, 6, 7, 8, 9, 'Radek']
+print(lista2)  # [5, 6, 7, 8, 9, 'Radek']
+
+lista_copy = lista.copy()
+lista.clear()  # czysci elementy listy
+print(lista)
+print(lista2)
+print(lista_copy)  # [5, 6, 7, 8, 9, 'Radek']
+print(lista_copy)
+
+# krotka - tuple
+krotka = tuple(lista_copy)
+print(krotka)  # lista do odczytu, pozwala efektywniej zarzadzac pamięcia
+
+zbior = {5, 6, 5, 6, 6, 7, 8, 9, 0}  # przechowuje unikalne wartosc
+print(zbior)
+# nie zachowuje kolejności przy dodawaniu elementów
+zbior_lista = set(lista_copy)
+print(zbior_lista)  # {5, 6, 7, 8, 9, 'Radek'}
+
+slownik = {'name': "radek", 'age': 45}
+print(slownik)  # {'name': 'radek', 'age': 45}
+print(slownik.keys())
+print(slownik.values())
+print(slownik.items())
+# dict_keys(['name', 'age'])
+# dict_values(['radek', 45])
+# dict_items([('name', 'radek'), ('age', 45)])
+slownik2 = {"name": ["Radek", "Tomek", "Piotr"]}
+print(slownik2)  # {'name': ['Radek', 'Tomek', 'Piotr']}
