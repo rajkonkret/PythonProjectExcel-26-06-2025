@@ -43,7 +43,7 @@ print(age)
 # tylko podpowiedzi typu
 name: str = 90
 
-print(name) # 90
+print(name)  # 90
 # mypy
 # pip install mypy
 
@@ -52,3 +52,44 @@ print(name) # 90
 # day_1\pierwszy.py:44: error: Name "name" already defined on line 33  [no-redef]
 # Found 2 errors in 1 file (checked 1 source file)
 # (.venv) PS C:\Users\cscomarch\PycharmProjects\PythonProjectExcel-26-06-2025>
+
+tekst = "witaj Świecie"
+
+print(tekst)
+print(type(tekst))  # <class 'str'>
+
+# teksty sa niemutowalne
+tekst.upper()
+print(tekst)
+print(tekst.upper())  # WITAJ ŚWIECIE
+zmienna = tekst.upper()
+print(zmienna)  # WITAJ ŚWIECIE
+
+zmienna1 = "GROSS"
+zmienna2 = "groß"
+print(zmienna1.lower() == zmienna2.lower())  # False
+print(zmienna1.casefold() == zmienna2.casefold())  # True
+
+print(1 != 0)  # rózne
+
+# rzutowanie
+print(int("39"))
+print(str(39))
+print("14" + str(39))  # 1439
+
+temp = 36.6
+print(type(temp))  # zmiennoprzecinkowy
+
+print(sys.float_info)
+# sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021,
+#                min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)
+
+print(0.1 + 0.9)  # 1.0
+print(0.1 + 0.2)  # 0.30000000000000004
+# 12.345 + 1.0001 = 13.3451
+
+# f - string format
+print(f"Nazywam się {name}")
+print("Nazywam się {}".format(name))
+
+print("Nazywam się %s" % name)  # Nazywam się 90
